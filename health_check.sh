@@ -1,5 +1,10 @@
 #!/bin/bash
 
-echo "Hello from shell script"
+IP=$(curl https://pokefun.fly.dev/health)
 
-exit 0 # exit status 0/1 means that the script "succeeds"/"fails"
+if [[ $IP == "ok" ]]
+then  
+{ echo "responds with ok." ; exit 0; }
+else
+{ echo "Failed, aborting." ; exit 1; }
+fi
