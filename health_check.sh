@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 IP=$(curl https://pokefun.fly.dev/health)
 
 if [[ $IP == "ok" ]]
